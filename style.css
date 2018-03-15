@@ -22,6 +22,7 @@ nav{
     height:100%;
     justify-content: space-between;
 }
+/********************************АДАПТИВНОСТЬ****************************/
 @media screen and (min-width: 1200px) and (max-width: 1429px){
     #nav_block{
         width:100%;
@@ -41,7 +42,10 @@ nav{
         background-size: 100% 100%;
     }
     .offers{
-        margin:40% 0 0 0;
+        margin:30% 0 0 0;
+    }
+    .offer_elem-inner{
+        margin:0;
     }
 }
 @media screen and (min-width:1430px) and (max-width:1799px){
@@ -79,32 +83,29 @@ nav{
 }
 
 .nav_elem a{
-    /*text-decoration-color: #c4c8ce;*/
     text-decoration: none;
     border-bottom: 1px solid #c4c8ce;;
     color:white;
     line-height: 2em;
 }
 .nav_elem a:hover{
-    /*text-decoration-color: white;*/
     color:#c4c8ce;
     text-decoration: none;
     border-bottom: 1px solid white;
 }
-/* три зелёных плашки */
+/************************* три зелёных плашки *****************/
 .offers{
     height:250px;
-   /* margin:40% 0 0 0;*/
     display:flex;
     flex-direction:column;
 }
 .offer_elem{
-    background:rgba(156,198,103,0.85);
+    background:rgba(72,160,81,0.85);
     border:1px solid red;
     flex:1;
 }
 .offer_elem:hover{
-    background:rgba(154,219,72,0.85);
+    background:rgba(5,175,13,0.85);
 }
 .offer_elem-inner{
     width:70%;
@@ -152,7 +153,8 @@ nav{
     color:white;
     padding:10px;
     text-align: center;
-    margin: 10% 0 0 0;
+    margin: 10% auto 0 auto;
+    width:80%;
 }
 .button:hover{
     background:#2a820f;
