@@ -36,6 +36,15 @@ nav{
         margin:40% 0 0 0;
     }
 }
+@media screen and (min-width:1430px) and (max-width:1799px){
+    .offers{
+        margin: 600px 0 0 0;
+    }
+    header{
+        height:950px;
+        background-size: 100% 100%;
+    }
+}
 @media screen and (min-width:1800px){
     header{
         height:1080px;
@@ -48,16 +57,11 @@ nav{
         margin:0;
         display:none;
     }
-}
-@media screen and (min-width:1430px) and (max-width:1799px){
-    .offers{
-        margin: 600px 0 0 0;
-    }
-    header{
-        height:950px;
-        background-size: 100% 100%;
+    .inner_left-text{
+        flex:3;
     }
 }
+/*****************************************************************************************/
 #nav_block-left{
     height:100%;
     display:flex;
@@ -163,13 +167,50 @@ nav{
     color:white;
     padding:10px;
     text-align: center;
-    margin: 10% auto 0 auto;
+    margin: 5% auto 0 auto;
     width:70%;
 }
 .button:hover{
     background:#2a820f;
     cursor:pointer;
 }
+.btn_modified:hover{
+    background: #7fbf22;
+}
+.btn_modified{
+    width:fit-content;
+    margin:0 0 0 55%;
+    padding:5px 15px;
+    display:inline-block;
+}
+/*  КНОПКА И ССЫЛКА НА СЛАЙДЕ 1*/
+#first_btn{
+    margin:0 1% 2% 23%;
+}
+#btn_modified_link_1{
+    color: #c9067b;
+    transition:100ms;
+}
+#btn_modified_link_1:hover{
+    color:white;
+}
+/* КНОПКА И ССЫЛКА НА СЛАЙДЕ 2*/
+#second_btn{
+    margin:0 1% 6% 15%;
+}
+#btn_modified_link_2{
+    color:white;
+    text-decoration: underline;
+}
+/* КНОПКА И ССЫЛКА НА СЛАЙДЕ 3 */
+#third_btn{
+
+}
+#btn_modified_link_3{
+
+}
+
+
 /***************************************************/
 main{
 
