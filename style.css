@@ -46,6 +46,7 @@ nav{
     }
     .offer_elem-inner{
         margin:0;
+        display:none;
     }
 }
 @media screen and (min-width:1430px) and (max-width:1799px){
@@ -147,14 +148,23 @@ nav{
     font-weight:normal;
     margin:0;
 }
+.inner_left-text a{
+    text-decoration: none;
+    color:white;
+}
+.inner_left-text a:hover{
+    border-bottom:1px solid white;
+    color:white;
+    text-decoration: none;
+}
 .button{
-    border-radius:10px;
+    border-radius:25px;
     background:#c9067b;
     color:white;
     padding:10px;
     text-align: center;
     margin: 10% auto 0 auto;
-    width:80%;
+    width:70%;
 }
 .button:hover{
     background:#2a820f;
