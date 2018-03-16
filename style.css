@@ -94,13 +94,13 @@ nav{
 }
 .offer_elem .button {visibility: hidden;}
 .offer_elem:hover .button {visibility: visible;}
-.inner_left-icon{
-    flex:1;
-    align-self:center;
-    border:1px solid orangered;
-}
-.inner_left-icon img{
-    margin:0 0 0 20px;
+.inner_left-icon {
+    align-self: center;
+    width:fit-content;
+    border: 1px solid orangered;
+    text-align:center;
+    vertical-align: middle;
+    padding:10px 15px;
 }
 .inner_left-text{
     flex:5;
@@ -179,12 +179,17 @@ nav{
 #fourth_btn{
     margin: 0 1% 2% 22%;
 }
-
-
-
 /***************************************************/
 main{
-
+}
+#promo_block{
+    width:100%;
+    background: #eeeeee;
+    height:600px; /** FIX HEIGHT **/
+}
+#promo_inner{
+    margin: 0 auto;
+    border:1px solid orange;
 }
 footer{
 
@@ -240,6 +245,9 @@ footer{
     .inner_left-text{
         flex:5;
     }
+    .inner_left-icon{
+
+    }
     .inner_right{
         margin:0;
         flex:2;
@@ -249,5 +257,9 @@ footer{
         width:fit-content;
         padding:10px;
     }
+    #promo_inner{
+        width:70%;
+    }
+
 }
 /*****************************************************************************************/
