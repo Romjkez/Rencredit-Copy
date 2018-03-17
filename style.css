@@ -2,13 +2,14 @@
     source: https://rencredit.ru/
 */
 body {
-    font-family: Roboto, Arial,sans-serif;
+    font-family: Roboto,sans-serif;
     padding:0;
     margin:0;
 }
 header {
     background: url(img/header_bg.jpg) no-repeat;
-    background-size: 100% auto;
+    background-size: auto;
+    background-position: center center;
     height:1000px;
 }
 nav{
@@ -66,7 +67,7 @@ nav{
 }
 .offer_elem{
     background:rgba(72,160,81,0.85);
-    border:1px solid red;
+    border-bottom:1px solid rgba(255,255,255,0.2);
     flex:1;
 }
 .offer_elem:hover{
@@ -74,20 +75,17 @@ nav{
 }
 .offer_elem-inner{
     width:70%;
-    border:1px solid black;
     margin: 0 auto;
     height: 100%;
     display:flex;
     justify-content: space-around;
 }
 .inner_left{
-    border:1px solid black;
     flex:3;
     display:flex;
     flex-direction: row;
 }
 .inner_right{
-    border:1px solid gray;
     flex:1;
     height:100%;
     margin: 0 0 0 10%;
@@ -97,7 +95,6 @@ nav{
 .inner_left-icon {
     align-self: center;
     width:fit-content;
-    border: 1px solid orangered;
     text-align:center;
     vertical-align: middle;
     padding:10px 15px;
@@ -106,7 +103,6 @@ nav{
     flex:5;
     color:white;
     align-self:center;
-    border:1px solid orangered;
 }
 .inner_left-text h3{
     font-weight:normal;
@@ -179,30 +175,151 @@ nav{
 #fourth_btn{
     margin: 0 1% 2% 22%;
 }
-/***************************************************/
+/*****************PROMO BLOCK**********************************/
 main{
 }
 #promo_block{
     width:100%;
     background: #eeeeee;
-    height:600px; /** FIX HEIGHT **/
 }
 #promo_inner{
+    width:70%;
+    justify-content: space-around;
     margin: 0 auto;
-    border:1px solid orange;
+    display:flex;
 }
+.promo_elem{
+    margin: 4% 0 0 0;
+    box-shadow:1px 1px 5px 0 darkgray;
+    width:25%;
+    height:fit-content;
+    display:flex;
+    flex-direction: column;
+    background:white;
+}
+.promo_elem-upper{
+}
+.promo_elem-down{
+}
+.promo_elem-down a{
+    color:#37c651;
+    font-size:18px;
+    text-decoration: underline;
+}
+.promo_elem-down h5{
+    margin:5% 0 10% 5%;
+}
+.promo_elem-down a:hover{
+    color:#c9067b;
+}
+.promo_elem-down ul{
+    list-style-image: url("img/marker.png");
+    line-height: 2em;
+    font-size: 15px;
+}
+#additional_service{
+    color:black;
+    text-decoration: underline;
+    text-decoration-color: #2a820f;
+    display:block;
+    width:fit-content;
+    margin:1% auto 0 auto;
+    padding-bottom: 1%;
+}
+#additional_service:hover{
+    color:#c9067b;
+    text-decoration-color: #c9067b;;
+}
+#news_block{
+}
+#news_inner{
+    width:65%;
+    display:flex;
+    flex-direction: row;
+    margin: 3% auto;
+    justify-content: space-between;
+}
+.news_inner-elem{
+    width:18%;
+}
+.news_inner-elem h4{
+    font-weight: normal;
+    width:fit-content;
+    margin: 0 0 4% 0;
+    text-decoration: none;
+}
+.news_inner-elem h4 a{
+    text-decoration: none;
+    border-bottom: 1px solid #2a820f;
+    color:black;
+}
+.news_inner-elem h4 a:hover{
+    border-bottom: 1px solid #c9067b;
+    color:#c9067b;
+}
+.date{
+    color:gray;
+}
+.news_text{
+    border-bottom:1px solid #2a820f;
+    color:black;
+    text-decoration:none;
+    font-size: 13px;
+}
+.news_text:hover{
+    text-decoration: none;
+    border-bottom:1px solid #c9067b;
+    color:#c9067b;
+}
+/******************************************************/
 footer{
 
 }
 /********************************АДАПТИВНОСТЬ****************************/
-@media screen and (min-width: 1200px) and (max-width: 1429px){
+@media screen and (max-width: 767px){
+    /*TODO ДОПИСАТЬ СТИЛИ И АДАПТИВНОСТЬ СЛАЙДЕРА И POSITION:STICKY ПРИ СКРОЛЛЕ*/
+}
+
+
+@media screen and (min-width:768px) and (max-width:1179px){
+    #promo_inner{
+        width:100%;
+    }
+    #news_inner{
+        width:95%;
+        justify-content: space-around;
+    }
+    .news_inner-elem{
+        width:25%;
+    }
+    .empty{ /* last news_inner-elem */
+        display:none;
+    }
+    #nav_block{
+        width:100%;
+        justify-content: space-between;
+        font-size: 13px;
+        background:gray;
+    }
+    #nav_block-left{
+        width:35%;
+    }
+    #nav_block-right{
+        width:55%;
+    }
+    .offers{
+        margin:50% 0 0 0;
+    }
+}
+@media screen and (min-width: 1180px) and (max-width: 1429px){
     #nav_block{
         width:100%;
         justify-content:space-around;
     }
     header{
         height:920px;
-        background-size: 100% 100%;
+        background-size: auto;
+        background-position: center center;
     }
     .offers{
         margin:40% 0 0 0;
@@ -219,6 +336,12 @@ footer{
     #fourth_btn{
         margin:0 1% 0 30%;
     }
+    #promo_inner{
+        width:90%;
+    }
+    #news_inner{
+        width:85%;
+    }
 }
 @media screen and (min-width:1430px) and (max-width:1799px){
     .offers{
@@ -227,15 +350,23 @@ footer{
     header{
         height:950px;
         background-size: 100% 100%;
+        background-position: center center;
+    }
+    #promo_inner{
+        width:80%;
+    }
+    #news_inner{
+        width:75%;
     }
 }
 @media screen and (min-width:1800px){
     header{
-        height:1080px;
-        background-size: 100% 100%;
+        height:1070px;
+        background-size: 100% auto;
+        background-position: center center;
     }
     .offers{
-        margin:30% 0 0 0;
+        margin:28% 0 0 0;
     }
     .offer_elem-inner{
         margin:0 0 0 30%;
@@ -260,6 +391,8 @@ footer{
     #promo_inner{
         width:70%;
     }
-
+    #news_inner{
+        width:65%;
+    }
 }
 /*****************************************************************************************/
