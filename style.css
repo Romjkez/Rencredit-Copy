@@ -9,12 +9,15 @@ body {
 header {
     background: url(img/header_bg.jpg) no-repeat;
     background-size: auto;
-    background-position: center center;
+    background-position: center;
     height:1000px;
 }
 nav{
     background: rgba(0,0,0,0.45);
     height:90px;
+}
+#nav_logo{
+    display:none;
 }
 #nav_block{
     display:flex;
@@ -47,7 +50,6 @@ nav{
 {
     margin:0 5px 0 0;
 }
-
 .nav_elem a{
     text-decoration: none;
     border-bottom: 1px solid #c4c8ce;;
@@ -260,6 +262,7 @@ main{
     color:#c9067b;
     text-decoration-color: #c9067b;;
 }
+/****************NEWS BLOCK********************/
 #news_block{
 }
 #news_inner{
@@ -513,7 +516,7 @@ footer{
     border-bottom:1px solid #7fbf22;
     color:#7fbf22;
 }
-/**********RIGHT BLOCK****************/
+/**********************RIGHT BLOCK*******************/
 .nbo_inner-elem.ebank{
     flex:20%;
     align-self: center;
@@ -530,10 +533,89 @@ footer{
 }
 /********************************АДАПТИВНОСТЬ****************************/
 @media screen and (max-width: 767px){
-    /*TODO ДОПИСАТЬ СТИЛИ И АДАПТИВНОСТЬ СЛАЙДЕРА И POSITION:STICKY ПРИ СКРОЛЛЕ*/
+   #nav_block{
+       display:none;
+       background:none;
+   }
+    nav{
+        background:white;
+        max-height:60px;
+        height:fit-content;
+    }
+    #nav_logo{
+        display:block;
+    }
+    .offer_elem .inner_left-text small{
+        display:none; /* убрали подписи к Кредитам, Вкладам и Картам*/
+    }
+    .offer_elem .button {display:none;}
+    .offer_elem:hover .button {display:none;}
+    .offers{
+        height:35%;
+    }
+    .offer_elem-inner{
+        width:95%;
+    }
+    .inner_left-text h3 a:hover{
+        border-bottom:none;
+    }
+    body{
+        min-width:300px;
+    }
+    header{
+        height: fit-content;
+        position:sticky;
+        overflow: hidden;
+        left:0;
+    }
+    #carouselExampleIndicators,#news_block,footer{
+        position:sticky;
+        overflow: hidden;
+        left:0;
+    }
+    .button.btn_modified{
+        display:none;
+    }
+    #btn_modified_link_1, #btn_modified_link_2,#btn_modified_link_3, #btn_modified_link_4{
+        display:none;
+    }
+    #promo_block{
+        width:100%;
+        overflow-x: scroll ;
+    }
+    #promo_inner{
+        min-width:950px;
+        overflow-x: scroll ;
+    }
+    .promo_elem{
+        width:300px;
+    }
+    #news_inner{
+        width:90%;
+        flex-direction: column;
+    }
+    .news_inner-elem{
+        width:75%;
+        margin: 0 auto;
+    }
+    .news_inner-elem.empty{
+        display:none;
+    }
+    .news_inner-elem.press{
+        margin:3% auto 0 auto;
+    }
+    .hidden-elem{
+        display:none;
+    }
+    .footer_inner{
+        width:100%;
+        flex-direction: column;
+    }
+    .footer_elem{
+        margin:1% auto;
+        width:75%;
+    }
 }
-
-
 @media screen and (min-width:768px) and (max-width:1179px){
     #promo_inner{
         width:100%;
