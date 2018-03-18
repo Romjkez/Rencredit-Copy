@@ -2,7 +2,7 @@
     source: https://rencredit.ru/
 */
 body {
-    font-family: Roboto,sans-serif;
+    font-family: Roboto,sans-serif !important;
     padding:0;
     margin:0;
 }
@@ -241,8 +241,11 @@ main{
 }
 .promo_elem-down ul{
     list-style-image: url("img/marker.png");
-    line-height: 2em;
-    font-size: 15px;
+    line-height: 1.6em;
+    font-size: 14px;
+}
+.promo_elem-down ul > li{
+    margin: 0 0 15px 0;
 }
 #additional_service{
     color:black;
@@ -270,7 +273,7 @@ main{
     width:18%;
 }
 .news_inner-elem h4{
-    font-weight: normal;
+    font-weight: lighter;
     width:fit-content;
     margin: 0 0 4% 0;
     text-decoration: none;
@@ -300,7 +303,152 @@ main{
 }
 /******************************************************/
 footer{
-
+    background:#eeeeee;
+    height:fit-content;
+}
+.footer_inner{
+    display:flex;
+    justify-content: space-between;
+    width:65%;
+    margin: 0 auto;
+}
+.footer_elem{
+    margin:4% 0 0 0;
+    width:25%;
+    border:1px solid black;
+    line-height: 1.1em;
+}
+.footer_elem ul{
+    list-style: none;
+    font-size:13px;
+    line-height: 2.1em;
+    padding: 0;
+    margin:0 0 20% 0;
+}
+.footer_elem ul li > a{
+    text-decoration: none;
+    border-bottom: 1px solid #2a820f;
+    color:black;
+}
+.footer_elem ul li > a:hover{
+    text-decoration: none;
+    border-bottom:1px solid #c9067b;
+    color:#c9067b;
+}
+.footer_elem > a{
+    font-weight: normal;
+    font-family: Roboto, sans-serif;
+    font-size:20px;
+    color:black;
+}
+.footer_elem > a:hover{
+    text-decoration:none;
+    color:black;
+}
+.footer_elem > small {
+    color:gray;
+    font-size:12px;
+}
+.footer_elem #social{
+    margin:5% 0 5% 0;
+}
+.footer_elem #social a{
+    display:inline-block;
+    width:35px;
+    height:27px;
+}
+#social > a:first-child{
+    background:url('img/social_3.png') 0 0  no-repeat;
+    background-size:200px;
+}
+#social > a:nth-child(2){
+    background:url('img/social_3.png') -34px 0  no-repeat;
+    background-size:200px;
+}
+#social > a:nth-child(3){
+    background:url('img/social_3.png') -68px 0  no-repeat;
+    background-size:200px;
+}
+#social > a:nth-child(4){
+    background:url('img/social_3.png') -101px 0  no-repeat;
+    background-size:200px;
+}
+#social > a:nth-child(5){
+    background:url('img/social_3.png') -135px 0  no-repeat;
+    background-size:200px;
+}
+#social > a:last-child{
+    background:url('img/social_3.png') -168px 0  no-repeat;
+    background-size:200px;
+}
+#social > a:first-child:hover{
+    background:url('img/social_3.png') 0 -27px  no-repeat;
+    background-size:200px;
+}
+#social > a:nth-child(2):hover{
+    background:url('img/social_3.png') -34px -27px  no-repeat;
+    background-size:200px;
+}
+#social > a:nth-child(3):hover{
+    background:url('img/social_3.png') -68px -27px  no-repeat;
+    background-size:200px;
+}
+#social > a:nth-child(4):hover{
+    background:url('img/social_3.png') -101px -27px  no-repeat;
+    background-size:200px;
+}
+#social > a:nth-child(5):hover{
+    background:url('img/social_3.png') -135px -27px  no-repeat;
+    background-size:200px;
+}
+#social > a:last-child:hover{
+    background:url('img/social_3.png') -168px -27px  no-repeat;
+    background-size:200px;
+}
+.footer_elem #contact_email{
+    color:#2a820f;
+    text-decoration: underline;
+    text-decoration-color: #7fbf22;
+    font-size:12px;
+}
+.footer_elem #contact_email:hover,.footer_elem #interfax:hover{
+    text-decoration: underline ;
+    text-decoration-color: #c9067b;
+    color:#c9067b;
+}
+.footer_elem #interfax{
+    font-size:12px;
+    text-decoration: underline;
+    text-decoration-color: #2a820f;
+}
+.footer_elem #copyright{
+    color:black;
+    font-size:12px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer_elem .copyright_left{
+    flex:25%;
+}
+.footer_elem .copyright_right{
+    flex:65%;
+}
+#footer_right li{
+    margin:10px 0 0 0;
+}
+#footer_right {
+    line-height: 1.5em;
+    margin:0 0 3% 0;
+}
+.footer_elem #owners {
+    font-size:12px;
+    text-decoration: underline;
+    text-decoration-color: #2a820f;
+    margin:0 0 9% 0;
+}
+.footer_elem #address{
+    font-size:12px;
 }
 /********************************АДАПТИВНОСТЬ****************************/
 @media screen and (max-width: 767px){
