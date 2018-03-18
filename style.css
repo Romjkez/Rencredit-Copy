@@ -315,7 +315,6 @@ footer{
 .footer_elem{
     margin:4% 0 0 0;
     width:25%;
-    border:1px solid black;
     line-height: 1.1em;
 }
 .footer_elem ul{
@@ -411,7 +410,7 @@ footer{
     text-decoration-color: #7fbf22;
     font-size:12px;
 }
-.footer_elem #contact_email:hover,.footer_elem #interfax:hover{
+.footer_elem #contact_email:hover,.footer_elem #interfax:hover, .footer_elem #owners a:hover{
     text-decoration: underline ;
     text-decoration-color: #c9067b;
     color:#c9067b;
@@ -441,14 +440,93 @@ footer{
     line-height: 1.5em;
     margin:0 0 3% 0;
 }
-.footer_elem #owners {
+.footer_elem #owners a{
     font-size:12px;
     text-decoration: underline;
     text-decoration-color: #2a820f;
+    color:black;
+}
+.footer_elem #owners{
     margin:0 0 9% 0;
 }
 .footer_elem #address{
     font-size:12px;
+}
+/********************БЛОК НАВИГАЦИИ ПРИ СКРОЛЛЕ*************************/
+#nav_block_onscroll{
+    position:fixed;
+    display:none;
+    z-index: 99999;
+    left:0;
+    top:0;
+    width:100%;
+    height:60px;
+    background: #2a820f;
+}
+#nbo_inner{
+    width:65%;
+    display:flex;
+    height:100%;
+    margin:0 auto;
+    flex-direction: row;
+}
+/********** LEFT BLOCK ***********/
+.nbo_inner-elem.menu{
+    display:flex;
+    flex:30%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nbo_inner-elem.menu > a{
+    color:white;
+    border-left:1px solid #7fbf22;
+    text-align: center;
+    font-size: 18px;
+    padding:3% 0 0 0;
+    flex:1;
+    height:100%;
+}
+.nbo_inner-elem.menu > a:hover{
+    text-decoration:none;
+    color:white;
+    background: #7fbf22;
+}
+/*********** MIDDLE BLOCK **********/
+.nbo_inner-elem.links{
+    flex:50%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.links-elem{
+    margin:0 0 0 7%;
+}
+.links-elem > a{
+    color:white;
+    font-size:14px;
+    border-bottom:1px solid #7fbf22;
+    text-decoration:none;
+}
+.links-elem > a:hover{
+    text-decoration:none;
+    border-bottom:1px solid #7fbf22;
+    color:#7fbf22;
+}
+/**********RIGHT BLOCK****************/
+.nbo_inner-elem.ebank{
+    flex:20%;
+    align-self: center;
+    text-align: right;
+}
+.nbo_inner-elem.ebank > a:nth-child(2){
+    color:white;
+    text-decoration: none;
+    font-size:20px;
+}
+.nbo_inner-elem.ebank > a:nth-child(2):hover{
+    border-bottom:1px solid white;
+    text-decoration: none;
 }
 /********************************АДАПТИВНОСТЬ****************************/
 @media screen and (max-width: 767px){
@@ -463,6 +541,12 @@ footer{
     #news_inner{
         width:95%;
         justify-content: space-around;
+    }
+    #nbo_inner{
+        width:85%;
+    }
+    .nbo_inner-elem.ebank{
+        display:none;
     }
     .news_inner-elem{
         width:25%;
@@ -491,6 +575,9 @@ footer{
         width:100%;
         justify-content:space-around;
     }
+    #nbo_inner{
+        width:75%;
+    }
     header{
         height:920px;
         background-size: auto;
@@ -516,9 +603,6 @@ footer{
     }
     #news_inner{
         width:85%;
-    }
-    .peu_inner{
-
     }
 }
 @media screen and (min-width:1430px) and (max-width:1799px){
