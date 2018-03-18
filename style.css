@@ -19,6 +19,9 @@ nav{
 #nav_logo{
     display:none;
 }
+#nav_menu{
+    display:none;
+}
 #nav_block{
     display:flex;
     width:75%;
@@ -614,6 +617,12 @@ footer{
     .footer_elem{
         margin:1% auto;
         width:75%;
+    }
+    #nav_menu{
+        display:block;
+        position:fixed;
+        right:0;
+        top:0;
     }
 }
 @media screen and (min-width:768px) and (max-width:1179px){
