@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Homework #2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="bootstrap.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -14,34 +14,39 @@
 <body>
     <header>
         <nav>
-            <img id="nav_logo" src="img/logo.png" alt="Ренессанс Кредит" width="200px" height="50">
+            <div id="nav_logo">
+                <img src="img/logo.png" alt="Ренессанс Кредит" width="100%" height="auto">
+            </div>
             <img id="nav_menu" src="img/menu.png" alt="Меню" width="40" height="40" style="float:right">
             <div id="nav_block">
                 <div id="nav_block-left">
                     <div class="nav_elem">
-                        <a href="#">О банке</a>
+                        <a style="font-weight:300;" href="#">О банке</a>
                     </div>
                     <div class="nav_elem">
-                        <a href="#">Поддержка клиентов</a>
+                        <a style="font-weight:300;" href="#">Поддержка клиентов</a>
                     </div>
                     <div class="nav_elem">
-                        <a href="#" id="no_underline"><img src="img/search.png" width="20" height="20" alt="Поиск"></a>
+                        <a style="font-weight:300;" href="#" id="no_underline"><img src="img/search.png" width="20" height="20" alt="Поиск"></a>
                     </div>
                 </div>
                 <div id="nav_block-right">
                     <div class="nav_elem" style="text-align: right;">
-                        <img src="img/geo_icon.png" height="20" width="20" alt="Геопозиция"><a style="font-size:14px;" href="#">Москва</a><br>
+                        <img src="img/geo_icon.png" height="20" width="20" alt="Геопозиция"><a id="dotted" style="font-size:14px;" href="#">Москва</a><br>
                         <a href="#">Адреса отделений</a>
                     </div>
                     <div class="nav_elem">
-                        <img src="img/mail_icon.png" width="25" height="15" alt="Почта"><a href="#">Задать вопрос</a>
+                        <img style="font-weight:300;" src="img/mail_icon.png" width="25" height="15" alt="Почта"><a href="#">Задать вопрос</a>
                     </div>
                     <div class="nav_elem">
-                        <img src="img/icon_lock.png" alt="Замок" width="25" height="25"><a href="#">Интернет-банк</a>
+                        <img style="font-weight:300;" src="img/icon_lock.png" alt="Замок" width="25" height="25"><a href="#">Интернет-банк</a>
                     </div>
                 </div>
             </div>
         </nav>
+        <div id="logo_desktop">
+            <img src="img/logo.png" alt="Логотип">
+        </div>
         <div id="nav_block_onscroll">
             <div id="nbo_inner">
                 <div class="nbo_inner-elem menu">
@@ -74,7 +79,7 @@
                                 <p><a href=""><img src="img/icon_money.png" alt="Деньги" width="50" height="50"></a></p>
                             </div>
                             <div class="inner_left-text">
-                                <h3><a href="">Кредиты</a> </h3>
+                                <h3><a href="" style="font-size: 25px;">Кредиты</a> </h3>
                                 <small><a href="">Оформить заявку</a> на кредит или ознакомиться с условиям получения</small>
                             </div>
                         </div>
@@ -90,7 +95,7 @@
                                 <p><a href=""><img src="img/icon_percent.png" alt="%" width="50" height="40"></a></p>
                             </div>
                             <div class="inner_left-text">
-                                <h3><a href="">Вклады</a></h3>
+                                <h3><a href="" style="font-size: 25px;">Вклады</a></h3>
                                 <small>Ознакомиться с условиями и <a href="">оформить заявку</a>  на открытие вклада</small>
                             </div>
                         </div>
@@ -106,7 +111,7 @@
                                 <p><a href=""><img src="img/icon_cards.png" alt="Карты" height="50" width="50"></a></p>
                             </div>
                             <div class="inner_left-text">
-                                <h3><a href="">Карты</a> </h3>
+                                <h3><a href="" style="font-size: 25px;">Карты</a> </h3>
                                 <small><a href="">Оформить карту</a>  или ознакомиться с условиями</small>
                             </div>
                         </div>
@@ -136,21 +141,21 @@
                 <div class="carousel-item">
                     <img class="d-block w-100" src="img/slider2.jpg" alt="Second slide">
                     <div class="carousel-caption">
-                        <div class="button btn_modified" id="second_btn">Оформить</div>
+                        <div class="button " id="second_btn">Оформить</div>
                         <a href="" id="btn_modified_link_2">Подробнее</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="img/slider3.jpg" alt="Third slide">
                     <div class="carousel-caption">
-                        <div class="button btn_modified" id="third_btn">Оформить</div>
+                        <div class="button" id="third_btn">Оформить</div>
                         <a href="" id="btn_modified_link_3">Подробнее</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="img/slider4.jpg" alt="Fourth slide">
                     <div class="carousel-caption">
-                        <div class="button btn_modified" id="fourth_btn">Оформить</div>
+                        <div class="button" id="fourth_btn">Оформить</div>
                         <a href="" id="btn_modified_link_4">Подробнее</a>
                     </div>
                 </div>
@@ -177,6 +182,7 @@
                             <li>Один документ при оформлении</li>
                             <li>Переплата - от 1% в месяц </li>
                         </ul>
+                        <br>
                     </div>
                 </div>
                 <div class="promo_elem">
@@ -190,6 +196,7 @@
                             <li>Достаточно одного документа</li>
                             <li>Оформление в салоне связи за 15 минут Возможность внести любой первоначальный взнос</li>
                         </ul>
+                        <br>
                     </div>
                 </div>
                 <div class="promo_elem">
@@ -202,6 +209,7 @@
                             <li>Получите гарантированную защиту от потери капитала</li>
                             <li>Получите социальный налоговый вычет с вложенных средств</li>
                         </ul>
+                        <br>
                     </div>
                 </div>
             </div>

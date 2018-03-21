@@ -1,8 +1,43 @@
 /*
     source: https://rencredit.ru/
 */
+@font-face{
+    font-family: 'Roboto-Regular';
+    font-face-name: 'Roboto-Regular';
+    src: url('fonts/Roboto-Regular.ttf') format('ttf'),
+    url('fonts/Roboto-Regular.eot') format('eot'),
+    url('fonts/Roboto-Regular.woff') format('woff');;
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto-Light';
+    font-face-name: 'Roboto-Light';
+    src: url('fonts/Roboto-Light.ttf') format('ttf'),
+        url('fonts/Roboto-Light.eot') format('eot'),
+        url('fonts/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+@font-face{
+    font-family: 'Roboto-Bold';
+    src: url('fonts/Roboto-Bold.ttf') format('ttf'),
+        url('fonts/Roboto-Bold.eot') format('eot'),
+        url('fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto-Medium';
+    src: url('fonts/Roboto-Medium.ttf') format('ttf'),
+    url('fonts/Roboto-Medium.eot') format('eot'),
+    url('fonts/Roboto-Medium.woff') format('woff');;
+    font-weight: 500;
+    font-style: normal;
+}
 body {
-    font-family: Roboto,sans-serif !important;
+    font-family: Roboto-Regular,Arial,sans-serif;
     padding:0;
     margin:0;
 }
@@ -28,18 +63,27 @@ nav{
     margin: 0 auto;
     height:100%;
     justify-content: space-between;
+    font-family: Roboto-Light,sans-serif !important;
+}
+#logo_desktop{
+    position:relative;
+}
+#logo_desktop img{
+    border-radius: 32px 0 52px 0;
+    background:white;
+    padding:20px 47px 19px 40px;
 }
 #nav_block-left{
     height:100%;
     display:flex;
     align-items: center;
     justify-content: space-around;
-    width:25%;
+    width:35%;
 }
 #nav_block-right{
     height:100%;
     display:flex;
-    width:45%;
+    width:55%;
     justify-content:space-around;
     align-items: center;
 }
@@ -55,7 +99,7 @@ nav{
 }
 .nav_elem a{
     text-decoration: none;
-    border-bottom: 1px solid #c4c8ce;;
+    border-bottom: 1px solid #c4c8ce;
     color:white;
     line-height: 2em;
 }
@@ -64,6 +108,13 @@ nav{
     text-decoration: none;
     border-bottom: 1px solid white;
 }
+#dotted{
+    text-decoration: none;
+    border-bottom:1px dotted #c4c8ce;
+}
+#dotted:hover{
+    border-bottom: 1px dotted white;
+}
 /************************* три зелёных плашки *****************/
 .offers{
     height:250px;
@@ -71,19 +122,19 @@ nav{
     flex-direction:column;
 }
 .offer_elem{
-    background:rgba(72,160,81,0.85);
+    background:rgba(100, 167, 66, 0.8);
     border-bottom:1px solid rgba(255,255,255,0.2);
     flex:1;
 }
 .offer_elem:hover{
-    background:rgba(5,175,13,0.85);
+    background:#85bc31;
 }
 .offer_elem-inner{
     width:70%;
     margin: 0 auto;
     height: 100%;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .inner_left{
     flex:3;
@@ -108,6 +159,7 @@ nav{
     flex:5;
     color:white;
     align-self:center;
+    font-family: 'Roboto-Light';
 }
 .inner_left-text h3{
     font-weight:normal;
@@ -125,7 +177,7 @@ nav{
 /******************КНОПКИ "ОФОРМИТЬ" **************************/
 .button{
     border-radius:25px;
-    background:#c9067b;
+    background:#d90664;
     color:white;
     padding:10px;
     text-align: center;
@@ -133,21 +185,23 @@ nav{
     width:70%;
 }
 .button:hover{
-    background:#2a820f;
+    background:#328935;
     cursor:pointer;
 }
 .btn_modified:hover{
     background: #7fbf22;
 }
 .btn_modified{
-    width:fit-content;
-    margin:0 0 0 55%;
-    padding:5px 15px;
-    display:inline-block;
+    /*width:fit-content;
+    margin:0 0 0 15%;
+    padding:0;
+    display:inline-block;*/
 }
 /*  КНОПКА И ССЫЛКА НА СЛАЙДЕ 1*/
 #first_btn{
-    margin:0 1% 2% 23%;
+    margin:0;
+    padding:5px 10px;
+    width:fit-content;
 }
 #btn_modified_link_1{
     color: #c9067b;
@@ -234,7 +288,7 @@ main{
 .promo_elem-down{
 }
 .promo_elem-down a{
-    color:#37c651;
+    color:rgb(67,148,57);
     font-size:18px;
     text-decoration: underline;
 }
@@ -279,15 +333,16 @@ main{
     width:18%;
 }
 .news_inner-elem h4{
-    font-weight: lighter;
     width:fit-content;
     margin: 0 0 4% 0;
     text-decoration: none;
 }
 .news_inner-elem h4 a{
     text-decoration: none;
-    border-bottom: 1px solid #2a820f;
+    border-bottom: 1px solid rgb(67,148,57);
     color:black;
+    font-family: Roboto-Light,sans-serif;
+    font-weight: 300;
 }
 .news_inner-elem h4 a:hover{
     border-bottom: 1px solid #c9067b;
@@ -334,6 +389,7 @@ footer{
     text-decoration: none;
     border-bottom: 1px solid #2a820f;
     color:black;
+    font-family: Roboto-Regular;
 }
 .footer_elem ul li > a:hover{
     text-decoration: none;
@@ -467,7 +523,7 @@ footer{
     top:0;
     width:100%;
     height:60px;
-    background: #2a820f;
+    background: rgb(54,139,57);
 }
 #nbo_inner{
     width:65%;
@@ -486,6 +542,7 @@ footer{
 .nbo_inner-elem.menu > a{
     color:white;
     border-left:1px solid #7fbf22;
+    font-family: Roboto-Light,sans-serif;
     text-align: center;
     font-size: 18px;
     padding:3% 0 0 0;
@@ -500,6 +557,7 @@ footer{
 /*********** MIDDLE BLOCK **********/
 .nbo_inner-elem.links{
     flex:50%;
+    font-family: Roboto-Light,sans-serif;
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -528,7 +586,8 @@ footer{
 .nbo_inner-elem.ebank > a:nth-child(2){
     color:white;
     text-decoration: none;
-    font-size:20px;
+    font-size:22px;
+    font-family: Roboto-Light,sans-serif;
 }
 .nbo_inner-elem.ebank > a:nth-child(2):hover{
     border-bottom:1px solid white;
@@ -540,6 +599,9 @@ footer{
        display:none;
        background:none;
    }
+    #logo_desktop{
+        display:none;
+    }
     nav{
         background:white;
         max-height:60px;
@@ -547,6 +609,7 @@ footer{
     }
     #nav_logo{
         display:block;
+        width:30%;
     }
     .offer_elem .inner_left-text small{
         display:none; /* убрали подписи к Кредитам, Вкладам и Картам*/
@@ -642,6 +705,9 @@ footer{
     .news_inner-elem{
         width:25%;
     }
+    #nav_logo{
+        display:none;
+    }
     .empty{ /* last news_inner-elem */
         display:none;
     }
@@ -660,14 +726,23 @@ footer{
     .offers{
         margin:50% 0 0 0;
     }
+    #logo_desktop{
+        margin: 4% 4%;
+        position:relative;
+    }
 }
 @media screen and (min-width: 1180px) and (max-width: 1429px){
     #nav_block{
         width:100%;
-        justify-content:space-around;
+        margin:-10px 0 0 0;
+        background:none;
+        justify-content:space-between;
     }
     #nbo_inner{
-        width:75%;
+        width:90%;
+    }
+    #nav_menu{
+        display:none;
     }
     header{
         height:920px;
@@ -675,7 +750,11 @@ footer{
         background-position: center center;
     }
     .offers{
-        margin:40% 0 0 0;
+        margin:30% 0 0 0;
+    }
+    .offer_elem-inner{
+        margin:0 0 0 25%;
+        width:75%;
     }
     #first_btn{
         margin:0 1% -10% 28%;
@@ -690,11 +769,30 @@ footer{
         margin:0 1% 0 30%;
     }
     #promo_inner{
-        width:90%;
+        width:95%;
+        justify-content: space-between;
     }
     #news_inner{
-        width:85%;
+        width:95%;
     }
+    .promo_elem-down li{
+        padding: 0 5% 0 0;
+    }
+    .footer_inner{
+        width:95%;
+    }
+    .inner_right{
+        flex:2;
+    }
+    .button{
+        width:50%;
+        float:right;
+        margin: 6% 15% 0 0;
+    }
+    #logo_desktop{
+        margin: 4% 4%;
+    }
+
 }
 @media screen and (min-width:1430px) and (max-width:1799px){
     .offers{
