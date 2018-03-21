@@ -673,9 +673,13 @@ footer{
     }
     #nav_menu{
         display:block;
-        position:fixed;
-        right:0;
-        top:0;
+        position:absolute;
+        right:1%;
+        top:1%;
+        width:auto;
+        height:100%;
+        max-width: 45px;
+        max-height:26px;
     }
 }
 @media screen and (min-width:768px) and (max-width:1179px){
@@ -835,7 +839,6 @@ footer{
     #logo_desktop{
         margin: 4% 4%;
     }
-
 }
 @media screen and (min-width:1430px) and (max-width:1799px){
     .offers{
@@ -960,6 +963,5 @@ footer{
         right:28%;
         top:27%;
     }
-
 }
 /*****************************************************************************************/
