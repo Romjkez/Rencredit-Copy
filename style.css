@@ -600,6 +600,7 @@ footer{
     #nav_logo{
         display:block;
         width:30%;
+        margin:0 0 0 1%;
     }
     .offer_elem .inner_left-text small{
         display:none; /* убрали подписи к Кредитам, Вкладам и Картам*/
