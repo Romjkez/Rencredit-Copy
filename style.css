@@ -218,8 +218,6 @@ nav{
     transition:100ms;
 }
 /*****************PROMO BLOCK**********************************/
-main{
-}
 #promo_block{
     width:100%;
     background: #eeeeee;
@@ -268,8 +266,6 @@ main{
 .peu_inner:hover{
     background-size: 111%;
 }
-.promo_elem-down{
-}
 .promo_elem-down a{
     color:rgb(67,148,57);
     font-size:18px;
@@ -303,8 +299,6 @@ main{
     text-decoration-color: #c9067b;;
 }
 /****************NEWS BLOCK********************/
-#news_block{
-}
 #news_inner{
     width:65%;
     display:flex;
@@ -497,7 +491,7 @@ footer{
 .footer_elem #address{
     font-size:12px;
 }
-/********************БЛОК НАВИГАЦИИ ПРИ СКРОЛЛЕ*************************/
+/********************TOP NAVIGATION WHILE SCROLLING*************************/
 #nav_block_onscroll{
     position:fixed;
     display:none;
@@ -514,6 +508,64 @@ footer{
     height:100%;
     margin:0 auto;
     flex-direction: row;
+}
+/**************** Mobile sidemenu ******************/
+.mobNavWrapper{
+    display:none;
+    background:rgba(0,0,0,.5);
+    width:100%;
+    position:absolute;
+    left:0;top:0;
+    z-index: 99;
+    height:100vh;
+}
+.mobNav{
+    width:70%;
+    position:absolute;
+    right:0;
+    z-index: 100;
+    height:100vh;
+    background: -webkit-linear-gradient(left, #4f9843, #7db942);
+    background: linear-gradient(to right, #4f9843, #7db942);
+}
+.mobNav_content{
+    margin:0 auto;
+    width:90%;
+}
+.mobNav_content-element{
+
+}
+.mobNav_content-element:not(:first-child) {
+    margin:5% 0 0 0;
+}
+.mobNav_content-element > a{
+    border-bottom:1px solid #b9d799;
+    text-decoration: none;
+    color:#fff;
+}
+.mobNav_content-search{
+
+}
+.mobNav_closeBtn{
+    display:flex;
+    justify-content: flex-end;
+}
+.mobNav_closeBtn>img{
+    padding:3%;
+}
+@keyframes mobNavOpen {
+    0%{right:-1000px;}
+    100%{right:0;}
+}
+@keyframes mobNavClose {
+    0%{right:0}
+    100%{right:-1000px;}
+}
+.mobNavOpen{
+    animation:mobNavOpen 400ms forwards;
+}
+.mobNavClose{
+    animation:mobNavClose 500ms forwards;
 }
 /********** LEFT BLOCK ***********/
 .nbo_inner-elem.menu{
@@ -576,7 +628,7 @@ footer{
     border-bottom:1px solid white;
     text-decoration: none;
 }
-/********************************АДАПТИВНОСТЬ****************************/
+/********************************ADAPTIVITY****************************/
 @media screen and (max-width: 767px){
    #nav_block{
        display:none;
@@ -596,7 +648,7 @@ footer{
         margin:0 0 0 1%;
     }
     .offer_elem .inner_left-text small{
-        display:none; /* убрали подписи к Кредитам, Вкладам и Картам*/
+        display:none;
     }
     .offer_elem .button {display:none;}
     .offer_elem:hover .button {display:none;}
@@ -618,10 +670,13 @@ footer{
         overflow: hidden;
         left:0;
     }
-    #carouselExampleIndicators,#news_block,footer{
+    #news_block,footer{
         position:sticky;
         overflow: hidden;
         left:0;
+    }
+    #carouselExampleIndicators{
+        display:none;
     }
     .button.btn_modified{
         display:none;
