@@ -24,6 +24,8 @@ function openMenu() {
         document.body.style.overflow='hidden';
         document.getElementById('nav_menu').addEventListener('click',closeMenu);
     }
+
+
 }
 function closeMenu() {
     if(isMenuOpen) {
